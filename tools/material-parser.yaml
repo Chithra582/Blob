@@ -1,0 +1,15 @@
+name: material-parser
+description: Parse unstructured study text or notes into categorized conceptual chunks.
+input_schema:
+  type: object
+  properties:
+    content:
+      type: string
+      description: The raw study notes, lecture transcript, or textbook text to analyze.
+    material_type:
+      type: string
+      enum: [syllabus, lecture_notes, textbook_excerpt, topic_summary]
+      description: Type of study material provided.
+  required:
+    - content
+    - material_type

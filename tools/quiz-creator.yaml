@@ -1,0 +1,19 @@
+name: quiz-creator
+description: Generate formative diagnostic quiz questions with distractors and explanations.
+input_schema:
+  type: object
+  properties:
+    subject:
+      type: string
+      description: Subject or topic to test.
+    difficulty:
+      type: string
+      enum: [beginner, intermediate, advanced]
+      description: Pedagogical complexity level of the quiz questions.
+    question_count:
+      type: integer
+      description: Total number of questions to construct.
+  required:
+    - subject
+    - difficulty
+    - question_count

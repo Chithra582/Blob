@@ -1,0 +1,19 @@
+name: mindmap-generator
+description: Construct a hierarchical mind map node-edge graph for a topic.
+input_schema:
+  type: object
+  properties:
+    root_topic:
+      type: string
+      description: Central subject or core thesis of the mind map.
+    subtopics:
+      type: array
+      items:
+        type: string
+      description: List of subtopics or categories branching from the root.
+    depth:
+      type: integer
+      description: Maximum hierarchical depth for nested child nodes.
+  required:
+    - root_topic
+    - subtopics

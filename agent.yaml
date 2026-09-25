@@ -1,0 +1,65 @@
+spec_version: "0.1.0"
+name: "blob-study-agent"
+version: "1.0.0"
+description: >
+  Autonomous AI-powered study companion and pedagogical synthesis agent for Blob. Transforms raw
+  course syllabi, lecture notes, and textbook content into active-recall flashcard decks, hierarchical
+  concept mind maps, and adaptive diagnostic quizzes under a privacy-first BYOK architecture.
+author: "Chithra R"
+license: "MIT"
+
+model:
+  preferred: "gemini-2.0-flash"
+  fallback:
+    - "gpt-4o"
+    - "claude-3-5-sonnet"
+  constraints:
+    temperature: 0.2
+    max_tokens: 4096
+
+skills:
+  - study-material-synthesizer
+  - flashcard-generator
+  - concept-mindmap-architect
+  - adaptive-quiz-evaluator
+
+tools:
+  - material-parser
+  - flashcard-builder
+  - mindmap-generator
+  - quiz-creator
+
+runtime:
+  max_turns: 10
+  temperature: 0.2
+  timeout: 120
+
+compliance:
+  risk_tier: standard
+  frameworks:
+    - ferpa
+    - gdpr
+  data_governance:
+    pii_handling: redact
+    data_classification: internal
+  recordkeeping:
+    audit_logging: true
+    log_format: structured_json
+  supervision:
+    human_in_the_loop: conditional
+    override_capability: true
+    kill_switch: true
+
+tags:
+  - education
+  - study-tools
+  - flashcards
+  - mindmaps
+  - quizzes
+  - active-recall
+  - byok
+  - pedagogical-agent
+
+metadata:
+  domain: "education"
+  category: "Education"

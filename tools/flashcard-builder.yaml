@@ -1,0 +1,19 @@
+name: flashcard-builder
+description: Generate active-recall flashcards from concept chunks.
+input_schema:
+  type: object
+  properties:
+    topic:
+      type: string
+      description: Main academic topic or subject name.
+    concept_chunks:
+      type: array
+      items:
+        type: string
+      description: Key concept statements or notes to convert into cards.
+    card_count:
+      type: integer
+      description: Number of flashcard pairs to generate.
+  required:
+    - topic
+    - concept_chunks
